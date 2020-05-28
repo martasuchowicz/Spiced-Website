@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: lightgrey;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+}
+
+/* NAVIGATION BAR SELECTROS */
+
+/* Tags */
+
+nav {
+    max-width: 100%;
+    height: 90px;
+    background-color: white;
+}
+
+/* Class */
+
+.logo img {
+    width: 180px;
+    height: auto;
+    float: left;
+    margin-top: 28px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+
+/* Id */
+
+#hamburgermenu-img {
+    width: 50px;
+    height: auto;
+    float: right;
+    margin-right: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+/* MIDDLE CONTAINER SELECTORS */
+/* Tags */
+
+h1 {
+    font-family: "Lora", serif;
+    color: white;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-family: "Lora", serif;
+}
+
+button {
+    font-size: 1.625rem;
+    background-color: #facd48;
+    border: #d06f31 3px solid;
+    color: #d06f31;
+    border-radius: 25px;
+    padding: 5px 30px;
+    width: 250px;
+    height: 50px;
+    cursor: pointer;
+}
+
+/* Class */
+
+.middle-container {
+    height: 800px;
+    background-image: url(photos/spices.jpg);
+    background-size: cover;
+}
+
+.headings {
+    position: absolute;
+    text-align: center;
+    transform: translate(-50%);
+    top: 400px;
+    left: 50%;
+}
+
+/* BOTTOM CONTAINER SELECTORS */
+
+/* Class */
+
+.bottom-container {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding-top: 70px;
+}
+
+.bottom-container .content-left {
+    width: 49.5%;
+    display: inline-block;
+    text-align: center;
+}
+
+.margin-top-bottom {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.bottom-container .content-inside {
+    display: inline-block;
+    max-width: 400px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.text {
+    margin-left: 16px;
+}
+
+/* FOOTER SELECTORS */
+
+/* Tag */
+
+footer {
+    height: 50px;
+    background-color: darkgray;
+    width: 100%;
+    margin-top: 80px;
+}
+
+footer p {
+    color: white;
+    font-size: 1rem;
+    margin-left: 40px;
+    padding-top: 17px;
+}
+
+/* HAMBURGER MENU */
+
+/* Class */
+
+.link {
+    display: block;
+    margin: 16px;
+    text-align: left;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+.open {
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transform: translateX(-250px);
+}
+
+/* Id */
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+    opacity: 0.3;
+    display: none;
+}
+
+#menu {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    /* this 100% is visible only in my viewport, i don't know how to change it so it will be visible while scrolling down; i tried vh but it's even shorter */
+    background-color: gray;
+    transition: 0.5s;
+    color: white;
+}
+
+#menu div {
+    display: block;
+    clear: both;
+}
+#menu-links {
+    margin-left: 1.5rem;
+}
+#x-button {
+    float: left;
+    font-size: 1.5rem;
+    padding: 20px;
+    margin-left: 11.25rem;
+    cursor: pointer;
+}
+
+#log-out > a {
+    margin-top: 3rem;
+    font-size: 0.75rem;
+}
+
+/*  POP UP MESSAGE */
+
+/* Tag */
+h3 {
+    font-family: "Lora", serif;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+h3,
+.popup-p {
+    width: 850px;
+    margin-left: 30px;
+    color: black;
+    line-height: 1.75;
+}
+
+/* Id */
+#pop-up {
+    position: fixed;
+    bottom: 5%;
+    left: 5%;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+#pop-up #messageWindow {
+    background-color: white;
+    height: 200px;
+    width: 900px;
+    border-radius: 15px;
+}
+
+#pop-up #x-Button {
+    cursor: pointer;
+    text-align: end;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1024px) {
+    .middle-container {
+        height: 600px;
+    }
+
+    .bottom-container {
+        height: 550px;
+    }
+    .headings {
+        top: 25%;
+    }
+}
+
+/* iPad */
+
+@media screen and (max-width: 768px) {
+    .middle-container {
+        height: 400px;
+    }
+
+    .headings h1 {
+        font-size: 2.5rem;
+    }
+
+    .headings {
+        top: 20%;
+    }
+
+    .headings button {
+        font-size: 1.375rem;
+    }
+}
+
+@media screen and (max-width: 601px) {
+    .headings h1 {
+        font-size: 1.875rem;
+    }
+
+    .headings button {
+        font-size: 1.25rem;
+        width: 220px;
+    }
+
+    .headings {
+        top: 30%;
+    }
+
+    .content-left img {
+        width: 50px;
+    }
+
+    .bottom-container .content-inside {
+        max-width: 260px;
+    }
+
+    .bottom-container .content-left {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+}
+
+/* iPhone 6 / 7 */
+
+@media screen and (max-width: 450px) {
+    .middle-container {
+        height: 300px;
+    }
+    .bottom-container .content-inside {
+        max-width: 200px;
+    }
+
+    .headings h1 {
+        font-size: 1.675rem;
+        width: 300px;
+    }
+
+    .headings {
+        top: 25%;
+    }
+
+    .headings button {
+        font-size: 1.125rem;
+        height: 40px;
+        width: 170px;
+    }
+}
+
+/* iPhone 5 / SE */
+
+@media screen and (max-width: 370px) {
+    .middle-container {
+        height: 300px;
+    }
+    .bottom-container .content-inside {
+        max-width: 180px;
+    }
+
+    .headings {
+        top: 30%;
+    }
+}
